@@ -1,0 +1,413 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden; */
+    /* margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: #282c34; */
+/* }
+
+.heading h1{
+    color: #000;
+}
+
+h3{
+    align-items: center;
+    justify-content: center;
+    animation-name: spin;
+    animation-duration: infinite;
+    font-size: 700;
+    margin: auto;
+    color: #fff;
+} */
+
+
+/* @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.heading-spin {
+    display: inline-block;
+    font-size: 3rem;
+    color: #ff0;
+    font-weight: bold;
+    animation: spin 2s linear infinite;
+}
+
+h3:hover{
+    animation-name: colors;
+    animation-duration: 4s;
+  }
+
+  @keyframes colors {
+    0%{
+        color: #fff;
+    }
+    25%{
+        color:red
+    }
+    50%{
+        color: orange;
+    }
+    100%{
+        color: #ff0;
+    }
+  }
+
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #ff0;
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: confetti-fall 1s infinite;
+}
+
+.confetti:nth-child(1) {
+    background-color: #ff0;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.confetti:nth-child(2) {
+    background-color: #0f0;
+    left: 30%;
+    animation-delay: 0.2s;
+}
+
+.confetti:nth-child(3) {
+    background-color: #f00;
+    left: 50%;
+    animation-delay: 0.4s;
+}
+
+.confetti:nth-child(4) {
+    background-color: #0ff;
+    left: 70%;
+    animation-delay: 0.6s;
+}
+
+.confetti:nth-child(5) {
+    background-color: #ff0;
+    left: 90%;
+    animation-delay: 0.8s;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: rotate(45deg) translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(45deg) translateY(100vh);
+        opacity: 0;
+    }
+}
+
+
+.heading{
+    margin: auto;
+    font-size: 750;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+h1{
+    color: #000;
+}
+
+.box{
+    height: 650px;
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    background-color: #fff;
+}
+
+.box2{
+    /* border: 1px solid #000; */
+    width: 50%;
+    height: 100%;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.box2 h1{
+    font-size: 96px;
+    /* border: 1px solid #000; */
+    margin-top: 150px;
+    text-align: center;
+    animation-duration: 5s;
+    animation-name: slide-heading;
+
+}
+
+@keyframes slide-heading {
+    0%{
+        transform: translateX(-300%);
+        color: orange
+    }
+    50%{
+        color: purple
+    }
+    100%{
+        transform: translateX(0%);
+        color:green
+    }
+}
+
+.box2 p{
+    color: #000;
+    /* border: 1px solid #000; */
+    font-size: 20px;
+    padding: 20px;
+    
+}
+
+.box2 img{
+    margin: 60px 80px auto;
+    width:80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+.box2 button{
+    height: 50px;
+    width: 50%;
+    margin-left: 200px;
+}
+.box2 button:hover{
+    background-color: #066c74 ;
+    color:#fff;
+}
+
+
+.zoom {
+    width: 300px;
+    height: 200px;
+    transition: transform 0.5s ease; 
+  }
+
+  .zoom:hover {
+    transform: scale(1.2); 
+    transition: 2s;
+  }
+
+.box3{
+    margin-top: 100px;
+
+}
+
+.box3 h1{
+    text-align: center;
+}
+
+.box3 p{
+    color:#000;
+}
+.collection{
+    /* border: 1px solid #000; */
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+
+
+.collection-item{
+    display: flex;
+    /* border: 1px solid #000; */
+    height: 80%;
+    width: 20%;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .collection-pic{
+  height: 80%;
+  width: 100%;
+  /* border: 1px solid #000; */
+  border-radius: 10px;
+  }
+
+  .collection-item:hover{
+    border: 2px solid #066c74;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .collection-pic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .video{
+    border: 1px solid #000;
+    height: 350px;
+    width: 100%;
+  }
+
+  .video video{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+  }
+
+  .float{
+    border: 1px solid #000;
+    height: 330px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.float div{
+    border: 1px solid #000;
+    height: 200px;
+    width: 18%;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.float img{
+    height: 100%;
+    width: 100%;
+    border: 5px;
+    object-fit: contain;
+}
+.float img:hover{
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s
+}
+
+.span{
+    color:#066c74 ;
+    ;
+}
+.span:hover{
+    cursor: pointer;
+}
+
+
+
+.more-info{
+    border: 1px solid #000;
+    background-color: #066c74;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+.more-info h3, label{
+   text-align: center;
+   color: #fff;
+}
+
+.input2{
+border: 1px solid #000;
+width: 2%;
+height: 30px;
+border-radius: 10px;
+margin-left: 35px;
+
+}
+
+input[type="checkbox"] {
+    accent-color: #000; 
+  }
+
+  input[type="checkbox"]:hover{
+    cursor: pointer;
+  }
+
+
+.email-input{
+    height: 70px;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 40px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.email-input::placeholder{
+    font-size: 24px;
+    color: #fff;
+}
+
+.email-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff; /* Set the icon color */
+    font-size: 18px; /* Adjust the icon size */
+    pointer-events: none; /* Disable interaction with the icon */
+  }
+
+
+.socials{
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social img,.social svg{
+    height: 50px;
+    width: 15%;
+    /* gap: 15px */
+}
+
+.social-heading h1{
+    text-align: center;
+}
+
+.designers{
+    font-style: italic;
+}
+
+.designer h1{
+    font-weight:lighter;
+}
+
+svg{
+    height: 30px;
+}
