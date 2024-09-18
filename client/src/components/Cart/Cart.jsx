@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
+
+const [items , setItems] = React.useState([])
+
+useEffect(()=>{
+  //get items stored locally
+  var cartItems = JSON.parse(sessionStorage.getItem("CartItems")) ?? [];
+  setItems(cartItems)
+
+},[])
+
   return (
-    <div>
+    <div className='Cart-box'>
       <h1>Cart Page</h1>
-      {/* Your cart details go here */}
+      
       <Link to="/checkout">Proceed to Checkout</Link>
     </div>
   );

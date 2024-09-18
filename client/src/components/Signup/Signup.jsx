@@ -29,7 +29,7 @@ function Signup({setSignedIn}) {
         e.preventDefault()
         
         console.log("data",inputValues)
-        
+        // everytime we sign in we set signeIn to true and then we go home
         axios.post('http://localhost:3000/users', inputValues)
         .then(result => {
             console.log(result)

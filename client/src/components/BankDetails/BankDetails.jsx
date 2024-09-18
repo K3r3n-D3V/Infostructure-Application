@@ -16,8 +16,8 @@ const BankDetails = () => {
       try {
         const response = await axios.get('http://localhost:3000/bankdetails');
         setBankDetails(response.data);
-        setBalance(response.data.balance || '0.00'); // Adjust based on the data structure
-        setTransactions(response.data.transactions || []); // Adjust based on the data structure
+        setBalance(response.data.balance || '0.00'); 
+        setTransactions(response.data.transactions || []); 
         setLoading(false);
       } catch (err) {
         setError(err.message);

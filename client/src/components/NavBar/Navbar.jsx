@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaShoppingCart, FaSearch } from 'react-icons/fa';
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('');  // State for search input
   const [products, setProducts] = useState([]);      // State to store products fetched from MongoDB
   const [filteredProducts, setFilteredProducts] = useState([]);  // State for filtered products
@@ -37,6 +39,9 @@ const Navbar = () => {
       setFilteredProducts([]);  // Set filtered products to empty array if there's an error
     }
   };
+  const handleCartButton = () => {
+    navigate('/cart')
+  }
 
   return (
     <nav className="navbar">
@@ -90,6 +95,9 @@ const Navbar = () => {
         <Link to="/cart">
           <FaShoppingCart className="icon" />
         </Link>
+        {/* <button onClick={handleCartButton}>
+          <FaShoppingCart className="icon" />
+        </button> */}
       </div>
     </nav>
   );

@@ -243,8 +243,7 @@ const Home = () => {
         </div>
         </div> */}
     <div className="video">
-    {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} loop={true} 
-  width='100%' height='400px' /> */}
+   <h1>Contact</h1>
       <video src="../../Screens/mixkit-white-luxury-boutique-hotel-room-4046-hd-ready.mp4" autoPlay loop mute controls></video>
     </div>
     </div>

@@ -8,7 +8,7 @@ function Login({setSignedIn}) {
     const navigate = useNavigate()
 
     const handleSignUpClick = () => {
-        navigate('/signup'); // Navigate to the Signup component
+        navigate('/signup'); 
       };
 
     const [inputValues, setInputValues] = useState({
@@ -40,7 +40,7 @@ function Login({setSignedIn}) {
   console.log('Login successful:', response.data);
   if (response.data === "Success"){
     setSignedIn(true)
-    navigate('/bankdetails')
+    navigate('/cart')
   }
 })
 .catch(error => {
