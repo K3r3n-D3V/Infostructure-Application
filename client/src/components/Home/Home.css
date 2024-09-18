@@ -1,12 +1,12 @@
 /* *{
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    overflow: hidden; */
+    overflow: hidden;  */
     /* margin: 0;
     height: 100vh;
     display: flex;
@@ -266,18 +266,7 @@ h1{
     border-radius: 10px;
   }
 
-  .video{
-    border: 1px solid #000;
-    height: 350px;
-    width: 100%;
-  }
-
-  .video video{
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-  }
-
+  
   .float{
     border: 1px solid #000;
     height: 330px;
@@ -410,4 +399,17 @@ input[type="checkbox"] {
 
 svg{
     height: 30px;
+}
+
+.video{
+  border: 1px solid #000;
+  height: 550px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.video video{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
 }

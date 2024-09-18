@@ -179,11 +179,6 @@ const Home = () => {
       </div>
     
     </div>
-    <div className="video">
-    {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} loop={true} 
-  width='100%' height='400px' /> */}
-      <video src="../../Screens/mixkit-white-luxury-boutique-hotel-room-4046-hd-ready.mp4" autoPlay loop mute controls></video>
-    </div>
     <div className="float">
       <div>
     <img src="../../Screens/home-faq-ic.png" alt=""/>
@@ -220,10 +215,10 @@ const Home = () => {
       <FaArrowRight className="email-icon" />
     </div>
 
-        <div className="social-heading">
+        {/* <div className="social-heading">
         <h1>Contact Us:</h1>
-        </div>
-      <div className="socials">
+        </div> */}
+      {/* <div className="socials">
         <div className="social">
           <a href="https://x.com/?lang=en">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -246,8 +241,12 @@ const Home = () => {
           <img src="../../Screens/facebook-svgrepo-com.svg" alt="" />
           </a>
         </div>
-        
-        </div>
+        </div> */}
+    <div className="video">
+    {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} loop={true} 
+  width='100%' height='400px' /> */}
+      <video src="../../Screens/mixkit-white-luxury-boutique-hotel-room-4046-hd-ready.mp4" autoPlay loop mute controls></video>
+    </div>
     </div>
   );
 };
