@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Matemasie&family=Oswald:wght@200..700&family=Playwrite+AR:wght@100..400&family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap");
-*{
+/* *{
   color: #fff
-}
+} */
 
  .login-container {
   height: 100vh;
@@ -26,34 +26,49 @@
 
 .login-box h2,p{
   text-align: center;
+  color: #fff;
 }
 
-input {
+.login-box input {
   display: block;
   width: 100%;
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
+  border: none;
   border-radius: 4px;
   background-color: transparent;
+  color: #fff;
 }
 
-input::placeholder{
+.login-box input:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: filter(6px);
+  cursor: pointer;
+}
+
+.login-box input::placeholder{
   color: #fff;
   outline: none;
 }
 
-button {
+.login-box button {
   width: 100%;
   padding: 10px;
   background-color: #0b0707;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   margin-top: 50px;
   cursor: pointer;
 }
-/* button:hover{
+
+.login-box button:hover{
   background-color: #fff;
   color: #000;
-} */
+}
+
+.login-box hr{
+  border: 1px solid #fff;
+  
+}

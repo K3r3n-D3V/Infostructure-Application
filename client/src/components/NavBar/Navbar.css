@@ -1,6 +1,6 @@
-    .navbar *{
+    /* .navbar *{
       color: #000;
-    }
+    } */
 
     .navbar {
       display: flex;
@@ -64,7 +64,7 @@
       color: black; 
       font-size: 22px;
       pointer-events:painted; 
-      margin-top: 25px;
+      margin-top: 10px;
     }
     
     .search-results {
@@ -96,6 +96,19 @@
       width: 300px;
       padding: 8px;
     }
-    
+    /* .cart-tag{
+      border: 1px solid #000;
+      border-radius: 100%;
+      background-color: #f00;
+      padding: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+    } */
   
     

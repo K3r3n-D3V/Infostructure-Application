@@ -1,148 +1,12 @@
-/* *{
-    /* margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    overflow: hidden;  */
-    /* margin: 0;
-    height: 100vh;
-    display: flex;
-    background-color: #282c34; */
-/* }
-
-.heading h1{
-    color: #000;
-}
-
-h3{
-    align-items: center;
-    justify-content: center;
-    animation-name: spin;
-    animation-duration: infinite;
-    font-size: 700;
-    margin: auto;
-    color: #fff;
-} */
-
-
-/* @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.heading-spin {
-    display: inline-block;
-    font-size: 3rem;
-    color: #ff0;
-    font-weight: bold;
-    animation: spin 2s linear infinite;
-}
-
-h3:hover{
-    animation-name: colors;
-    animation-duration: 4s;
-  }
-
-  @keyframes colors {
-    0%{
-        color: #fff;
-    }
-    25%{
-        color:red
-    }
-    50%{
-        color: orange;
-    }
-    100%{
-        color: #ff0;
-    }
-  }
-
-
-.confetti-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-}
-
-.confetti {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    background-color: #ff0;
-    opacity: 0;
-    transform: rotate(45deg);
-    animation: confetti-fall 1s infinite;
-}
-
-.confetti:nth-child(1) {
-    background-color: #ff0;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.confetti:nth-child(2) {
-    background-color: #0f0;
-    left: 30%;
-    animation-delay: 0.2s;
-}
-
-.confetti:nth-child(3) {
-    background-color: #f00;
-    left: 50%;
-    animation-delay: 0.4s;
-}
-
-.confetti:nth-child(4) {
-    background-color: #0ff;
-    left: 70%;
-    animation-delay: 0.6s;
-}
-
-.confetti:nth-child(5) {
-    background-color: #ff0;
-    left: 90%;
-    animation-delay: 0.8s;
-}
-
-@keyframes confetti-fall {
-    0% {
-        transform: rotate(45deg) translateY(-100vh);
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(45deg) translateY(100vh);
-        opacity: 0;
-    }
-}
-
-
-.heading{
-    margin: auto;
-    font-size: 750;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} */
-
-h1{
-    color: #000;
-}
-
 .box{
     height: 600px;
     width: 100%;
     /* border: 1px solid #000; */
     display: flex;
     background-color: #fff;
+}
+.box h1{
+    color: #000;
 }
 
 .box2{
@@ -197,15 +61,17 @@ h1{
 }
 
 .box2 button{
+    background-color: #000;
+    color: #fff;
     height: 50px;
     width: 50%;
     margin-left: 200px;
+    border-radius: 10px;
 }
 .box2 button:hover{
     background-color: #066c74 ;
     color:#fff;
 }
-
 
 .zoom {
     width: 300px;
@@ -225,6 +91,7 @@ h1{
 
 .box3 h1{
     text-align: center;
+    color: #000
 }
 
 .box3 p{
@@ -332,7 +199,7 @@ width: 2%;
 height: 30px;
 border-radius: 10px;
 margin-left: 35px;
-
+color: #000;
 }
 
 input[type="checkbox"] {
@@ -364,7 +231,7 @@ input[type="checkbox"] {
     right: 10px; 
     top: 50%;
     transform: translateY(-50%);
-    color: #fff; /* Set the icon color */
+    color: #fff;
     font-size: 18px; /* Adjust the icon size */
     pointer-events: none; /* Disable interaction with the icon */
   }

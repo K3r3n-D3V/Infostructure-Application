@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaUser, FaShoppingCart, FaSearch } from 'react-icons/fa';
+import { FaUser, FaShoppingCart, FaSearch, FaHome } from 'react-icons/fa';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           <FaSearch className="search-icon" />
           <input 
             type="text" 
-            placeholder="Search..." 
+            placeholder="What are you looking for?" 
             className="search-input" 
             value={searchTerm}
             onChange={handleSearch} 
@@ -89,6 +89,9 @@ const Navbar = () => {
       )}
 
       <div className="navbar-icons">
+        <Link to="/">
+        <FaHome className='icon' />
+        </Link>
         <Link to="/profile">
           <FaUser className="icon" />
         </Link>

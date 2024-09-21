@@ -10,7 +10,7 @@ const Home = () => {
   navigate("/productscreen")
  }
   return (
-    <div>
+    <div className='home'>
       <Navbar/>
       <div className="box">
         <div className="box2">

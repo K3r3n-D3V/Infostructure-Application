@@ -57,7 +57,7 @@ function Signup({setSignedIn}) {
                 value={inputValues.FirstName}
                 autoComplete='off'
                 name='FirstName'
-                className='signup-input'
+                className='signup-box'
                 required
                 />
             </div>
@@ -71,7 +71,7 @@ function Signup({setSignedIn}) {
                 value={inputValues.LastName}
                 autoComplete='off'
                 name='LastName'
-                className='signup-input'
+                className='signup-box'
                 required
                 />
             </div>
@@ -85,7 +85,7 @@ function Signup({setSignedIn}) {
                 placeholder='Enter Email Address'
                 autoComplete='off'
                 name='email'
-                className='signup-input'
+                className='signup-box'
                 required
                 />
             </div>
@@ -99,7 +99,7 @@ function Signup({setSignedIn}) {
                 value={inputValues.password}
                 autoComplete='off'
                 name='password'
-                className='signup-input'
+                className='signup-box'
                 required />
             </div>
             <button type='submit' className='signup-btn'>

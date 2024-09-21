@@ -5,12 +5,18 @@ const ContextProvider = ({children}) => {
 
     const [cartCount , setCartCount] = useState(0);
     const [isLogged , setLoggedIn] = useState(false);
+    const [user , setUser] = useState(false); //use the setter in login and signup
     
     const ContextValues = {
       cartCount,
       setCartCount,
       isLogged ,
-      setLoggedIn
+      setLoggedIn,
+      user,
+      setUser,
+      AuthenticatedStatus : (val)=>{
+        sessionStorage.setItem("AuthStatus",val)
+      }
     }
 
   return (

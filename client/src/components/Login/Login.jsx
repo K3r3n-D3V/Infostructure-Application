@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
+import { InfostructureContext } from '../../context/context';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 
 
 function Login({setSignedIn}) {
     const navigate = useNavigate()
+    const {AuthenticatedStatus} = useContext(InfostructureContext)
 
     const handleSignUpClick = () => {
         navigate('/signup'); 
@@ -40,6 +42,7 @@ function Login({setSignedIn}) {
   console.log('Login successful:', response.data);
   if (response.data === "Success"){
     setSignedIn(true)
+    AuthenticatedStatus(true);
     navigate('/cart')
   }
 })
@@ -63,6 +66,7 @@ function Login({setSignedIn}) {
                 placeholder='Enter Email Address'
                 autoComplete='on'
                 name='email'
+                className='login-box'
                 required
                 />
             </div>
@@ -76,6 +80,7 @@ function Login({setSignedIn}) {
                 value={inputValues.password}
                 autoComplete='off'
                 name='password'
+                className='login-box'
                 required
                  />
             </div>

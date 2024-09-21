@@ -14,11 +14,7 @@
     /* overflow:auto; */
 }
 
-    .navbar2 *{
-        color: #fff;
-      }
-  
-      .navbar2 {
+      .product-navbar{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,64 +22,76 @@
         padding: 10px 20px;
       }
       
-      .navbar-logo2 img {
+      .product-navbar-logo img {
         width: 200px;
         height: 100px;
         border-radius: 180px;
       }
       
-      .navbar-search2 input {
+      .product-navbar-search input {
         width: 600px;
         padding: 12px;
         border-radius: 4px;
         border: 1px solid #fff;
-        
+        /* color: #000; */
       }
-      .navbar-search2 input::placeholder{
+
+      /* .product-navbar-search{
+
+      } */
+
+
+      .product-navbar-search input::placeholder{
         font-size: 20px;
-        color: #fff;
+        color: #000;
       }
       
-      .navbar-icons2 {
+      .product-navbar-icons {
         display: flex;
         gap: 5px;
       }
       
-      .icon2 {
+      .product-navbar-icon {
         font-size: 60px;
-        color: black;
+        color: #fff;
         cursor: pointer;
         border-radius: 20px;
       }
       
-      .icon2:hover {
+      .product-navbar-icon:hover {
         color: #ccc;
       }
   
-      .navbar-search2 {
-        position: relative; /* Allows positioning the search icon inside the input */
+      .product-navbar-search{
+        position: relative;
         display: flex;
         align-items: center;
       }
       
-      .search-input2 {
+      .product-navbar-search-input input{
         width: 250px;
         padding: 8px 40px 8px 16px; 
         border-radius: 20px;
         border: 1px solid #ccc;
         font-size: 16px;
+        color: #000;
       }
+
+      .product-navbar-search-input input::placeholder{
+        color: #000;
+        font-size: 20px;
+      }
+
       
-      .search-icon2 {
+      .product-navbar-search-icon{
         position: absolute;
         right: 10px; 
-        color: black; 
+        color: #000; 
         font-size: 22px;
-        pointer-events:painted; 
-        margin-top: 25px;
+        margin-top: 10px;
       }
       
-      .search-results2 {
+      .product-navbar-search-results {
         margin-top: 350px;
         position: absolute;
         background-color: #000;
@@ -95,22 +103,18 @@
         border-radius: 20px;
       }
       
-      .search-item2 {
+      .product-navbar-search-item {
         display: flex;
         padding: 30px;
         border-bottom: 1px solid #066c74;
         margin:auto;
       }
       
-      .product-info2 {
+      .product-navbar-info {
         margin-left: 10px;
         
       }
       
-      .search-input2 {
-        width: 300px;
-        padding: 8px;
-      }
       
       .cart-tag{
         border: 1px solid #000;
@@ -123,5 +127,7 @@
         justify-content: center;
         width: 25px;
         font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
       }
   

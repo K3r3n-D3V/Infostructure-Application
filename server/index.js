@@ -529,6 +529,8 @@ app.put('/bankdetails/:accountNumber', async (req, res) => {
     }
 });
 
+
+
 // Initialise connection to MongoDb and start server on ports
 app.listen(PORT, async () => {
     await connectToMongo();
