@@ -1,0 +1,24 @@
+.location-navbar{
+border: 1px solid #000;
+height: 80px;
+width: 100%;
+}
+
+.location-navbar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.location-navbar li{
+width: 15%;
+text-align: center;
+padding-top: 30px;
+color: #fff;
+}
+
+.location-navbar li:hover{
+    cursor: pointer;
+    color: #000;
+}

@@ -1,61 +1,61 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-image: url(../../../public/Screens/bankdetails.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  .dashboard {
-    display: flex;
-    min-height: 100vh;
-    background-image: url(../../../public/Screens/bankdetails.jpg);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+}
 
-  }
-  
-  .sidebar {
-    width: 15%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 10px;
-  }
-  
-  .sidebar ul li {
-    font-size: 20px;
-    padding: 15px;
-    /* color: #fff; */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .sidebar ul li:hover {
-    background-color: #333;
-    border-radius: 5px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-    height: 100px;
-    width: 100%;
-  }
-  
-  
-  
-  .assistant, .logout {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-  }
+.sidebar {
+  width: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
 
-  /* .main-content{
+.sidebar ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.sidebar ul li {
+  font-size: 20px;
+  padding: 15px;
+  /* color: #fff; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.assistant,
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* .main-content{
     width: 100%;
   }
   .card-details{
@@ -64,10 +64,10 @@
     height: 400px;
     width: 80%;
     margin-bottom: 20px; */
-    /* display: flex; */
-  /* } */
+/* display: flex; */
+/* } */
 
-  /* .card{
+/* .card{
     border: 1px solid #000;
     background-color: aqua;
     height: 350px;
@@ -81,15 +81,15 @@
     width:100%;
     background-color: #000;
   } */
-  
- /* .card-details {
+
+/* .card-details {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
   }  */
 
 
-  /* .chart ul {
+/* .chart ul {
     list-style-type: none;
     padding: 0;
   }
@@ -98,5 +98,3 @@
     padding: 5px 0;
   }
     */
-
-

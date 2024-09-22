@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { FaUser, FaCreditCard, FaChartLine, FaSignOutAlt } from 'react-icons/fa';
-import axios from 'axios';
-import './BankDetails.css';
+import React, { useState, useEffect } from "react";
+import {
+  FaUser,
+  FaCreditCard,
+  FaChartLine,
+  FaSignOutAlt,
+} from "react-icons/fa";
+import axios from "axios";
+import "./BankDetails.css";
 
 const BankDetails = () => {
   const [bankDetails, setBankDetails] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [balance, setBalance] = useState('0.00'); // Default balance value
+  const [balance, setBalance] = useState("0.00"); // Default balance value
   const [transactions, setTransactions] = useState([]); // Default empty array for transactions
-  
 
   useEffect(() => {
     const fetchBankDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/bankdetails');
+        const response = await axios.get("http://localhost:3000/bankdetails");
         setBankDetails(response.data);
-        setBalance(response.data.balance || '0.00'); 
-        setTransactions(response.data.transactions || []); 
+        setBalance(response.data.balance || "0.00");
+        setTransactions(response.data.transactions || []);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -47,7 +51,9 @@ const BankDetails = () => {
       <div className="dashboard">
         <nav className="sidebar">
           <ul>
-            <li><FaCreditCard /> My Bank</li>
+            <li>
+              <FaCreditCard /> My Bank
+            </li>
             <li>Cards</li>
             <li>Transfers</li>
             <li>Payments</li>
@@ -80,7 +86,8 @@ const BankDetails = () => {
               <ul>
                 {transactions.map((item, index) => (
                   <li key={index}>
-                    {item.month}: Income - {item.income}, Expenses - {item.expenses}
+                    {item.month}: Income - {item.income}, Expenses -{" "}
+                    {item.expenses}
                   </li>
                 ))}
               </ul>

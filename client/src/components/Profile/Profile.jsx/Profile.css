@@ -1,12 +1,11 @@
-
-.profile{
+.profile {
     background-image: url(../../../../public/Screens/profile-pic-bcg.jpg);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.profile-pic{
+.profile-pic {
     border: 1px solid #000;
     height: 200px;
     width: 40%;
@@ -14,7 +13,7 @@
     border-radius: 50%;
 }
 
-.profile-pic img{
+.profile-pic img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -54,7 +53,7 @@
     cursor: pointer;
 }
 
-.profile button{
+.profile button {
     background-color: red;
     color: white;
     height: 50px;

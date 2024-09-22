@@ -1,27 +1,29 @@
-.every{
-  background-image:url(../../../public/Screens/checkout.jpg) ;
+.every {
+  background-image: url(../../../public/Screens/checkout.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 100vh;
+  height: 120vh;
   width: 100%;
 }
 
-.checkout-heading{
+.checkout-heading {
   border: 1px solid #000;
-  height: 60px;
+  height: 100px;
   width: 100%;
 }
 
-.checkout-heading h2{
+.every h2 {
   color: #fff;
-  text-align: center;
+  text-align: start;
+  font-size: 50px;
+  padding: 20px;
 }
 
-.personal-info{
+.personal-info {
   /* border: 1px solid #fff; */
-  height: 400px;
+  height: 500px;
   width: 60%;
   padding: 20px;
   margin: 40px auto;
@@ -30,11 +32,12 @@
   backdrop-filter: blur(2px);
 }
 
-.personal-info h3{
+.personal-info h3,
+.personal-info h4 {
   color: #fff;
 }
 
-.personal-info input{
+.personal-info input {
   height: 40px;
   width: 40%;
   padding: 10px;
@@ -44,26 +47,55 @@
   color: #fff;
 }
 
-.personal-info input:hover{
+.personal-info input:hover {
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid #fff;
   cursor: pointer;
 }
 
-.personal-info input::placeholder{
+.personal-info input::placeholder {
   color: #fff;
 }
 
-.personal-info button{
-border: 1px solid #000;
-height: 40px;
-width: 20%;
-background-color: #fff;
-margin:30px 20px auto;
-border-radius: 10px;
+.personal-info button {
+  border: 1px solid #000;
+  height: 40px;
+  width: 20%;
+  background-color: #fff;
+  margin: 30px 20px auto;
+  border-radius: 10px;
 }
 
-.personal-info button:hover{
+.personal-info button:hover {
   background-color: cadetblue;
   cursor: pointer;
+}
+
+.personal-info ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-info li {
+  width: 50%;
+  color: #fff;
+}
+
+.return-cart{
+  height: 100px;
+  width: 20%;
+  margin-bottom: 200px;
+}
+
+.return-cart button{
+  height: 40px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.return-cart button:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 1px solid #fff;
 }

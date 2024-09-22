@@ -531,6 +531,118 @@ app.put('/bankdetails/:accountNumber', async (req, res) => {
 
 
 
+
+// CREATE a new UserPaymentHistory document
+app.post('/payment-history', async (req, res) => {
+    try {
+        const newPayment = req.body; // Extract new payment details from request body
+        const paymentHistoryCollection = db.collection('UserPaymentHistory'); // Collection name
+
+        // Validate that necessary fields are provided
+        if (!newPayment.PaymentDate || 
+            !newPayment.PaymentMethod || 
+            !newPayment.ProductId || 
+            !newPayment.Quantity || 
+            !newPayment.TotalPrice || 
+            !newPayment.TransactionId || 
+            !newPayment.UnitPrice || 
+            !newPayment.DeliveryMethod || 
+            !newPayment.PaymentAmount || 
+            !newPayment.ProductName || 
+            !newPayment.UserId || 
+            !newPayment.Status) {
+            return res.status(400).send('All payment fields are required');
+        }
+
+        // Insert the new payment record
+        const result = await paymentHistoryCollection.insertOne(newPayment);
+
+        if (result.acknowledged) {
+            res.status(201).send('Payment history successfully added');
+        } else {
+            res.status(500).send('Error adding payment history');
+        }
+    } catch (error) {
+        console.error('Error adding payment history:', error.message);
+        res.status(500).send('Error adding payment history');
+    }
+});
+
+  
+  // READ all UserPaymentHistory documents
+  app.get('/payment-history', async (req, res) => {
+    try {
+      const paymentHistory = await collection.find().toArray();
+      res.status(200).send(paymentHistory);
+    } catch (error) {
+      res.status(500).send({ error: 'Error fetching payment history' });
+    }
+  });
+  
+  // READ a specific UserPaymentHistory document by TransactionId
+  app.get('transaction/:transactionId', async (req, res) => {
+    try {
+      const transactionId = req.params.transactionId;
+      const paymentHistory = await collection.findOne({ TransactionId: transactionId });
+      if (paymentHistory) {
+        res.status(200).send(paymentHistory);
+      } else {
+        res.status(404).send({ error: 'Payment history not found' });
+      }
+    } catch (error) {
+      res.status(500).send({ error: 'Error fetching payment history' });
+    }
+  });
+  
+  // UPDATE a specific UserPaymentHistory document by TransactionId
+  app.put('transaction/:transactionId', async (req, res) => {
+    try {
+      const transactionId = req.params.transactionId;
+      const updatedData = {
+        $set: {
+          PaymentDate: req.body.PaymentDate,
+          PaymentMethod: req.body.PaymentMethod,
+          ProductId: req.body.ProductId,
+          Quantity: req.body.Quantity,
+          TotalPrice: req.body.TotalPrice,
+          TransactionId: req.body.TransactionId,
+          UnitPrice: req.body.UnitPrice,
+          DeliveryMethod: req.body.DeliveryMethod,
+          PaymentAmount: req.body.PaymentAmount,
+          ProductName: req.body.ProductName,
+          UserId: req.body.UserId,
+          Status: req.body.Status,
+        },
+      };
+      
+      const result = await collection.updateOne({ TransactionId: transactionId }, updatedData);
+      if (result.matchedCount > 0) {
+        res.status(200).send({ message: 'Payment history updated' });
+      } else {
+        res.status(404).send({ error: 'Payment history not found' });
+      }
+    } catch (error) {
+      res.status(500).send({ error: 'Error updating payment history' });
+    }
+  });
+  
+  // DELETE a specific UserPaymentHistory document by TransactionId
+  app.delete('/payment-history/transaction/:transactionId', async (req, res) => {
+    try {
+      const transactionId = req.params.transactionId;
+      const result = await collection.deleteOne({ TransactionId: transactionId });
+      if (result.deletedCount > 0) {
+        res.status(200).send({ message: 'Payment history deleted' });
+      } else {
+        res.status(404).send({ error: 'Payment history not found' });
+      }
+    } catch (error) {
+      res.status(500).send({ error: 'Error deleting payment history' });
+    }
+  });
+
+
+
 // Initialise connection to MongoDb and start server on ports
 app.listen(PORT, async () => {
     await connectToMongo();

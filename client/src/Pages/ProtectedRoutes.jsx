@@ -1,13 +1,13 @@
-import React from 'react'
-import { Outlet, Navigate, Route} from 'react-router'
+import React from "react";
+import { Outlet, Navigate } from "react-router-dom"; // Make sure to import from 'react-router-dom'
 
+const ProtectedRoutes = ({ signedIn }) => {
+  const user = signedIn;
+  return user ? (
+    <Outlet />
+  ) : (
+    <Navigate to={user === false ? "/signup" : "/login"} />
+  );
+};
 
-const ProtectedRoutes = ({signedIn}) => {
-    const user = signedIn
-    return user ? <Outlet/> : <Navigate to="/signup"/> || <Navigate to="/login"/>
-
-   
-
-}
-
-export default ProtectedRoutes
+export default ProtectedRoutes;

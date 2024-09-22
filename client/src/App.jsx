@@ -27,7 +27,7 @@
 //     var bool = JSON.parse(sessionStorage.getItem("AuthStatus"))
 
 //     setSignedIn(bool);
-  
+
 //     console.log("running");
 
 //     try {
@@ -91,8 +91,6 @@
 // }
 
 // export default App;
-
-
 
 //The one that was def working
 
@@ -160,7 +158,6 @@
 
 // export default App;
 
-
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Signup from "./components/Signup/Signup";
@@ -189,6 +186,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/products/:id" component={ProductScreen} />
         <Route path="/locations" element={<Locations />} />
         <Route
           path="/productscreen"
@@ -202,21 +200,17 @@ function App() {
           path="/bankdetails"
           element={<BankDetails setSignedIn={setSignedIn} />}
         />
-        <Route
-          path="/signup"
-          element={<Signup setSignedIn={setSignedIn} />}
-        />
+        <Route path="/signup" element={<Signup setSignedIn={setSignedIn} />} />
         <Route
           path="/login"
           element={<Login setSignedIn={setSignedIn} />} // Allow access to login
         />
         <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
 
-          <Route path="/profile" element={<Profile signedIn={signedIn} />} />
+        <Route path="/profile" element={<Profile signedIn={signedIn} />} />
         {/* Protected routes */}
-        <Route element={<ProtectedRoutes signedIn={signedIn} />}>
-        </Route>
+        <Route element={<ProtectedRoutes signedIn={signedIn} />}></Route>
 
         {/* Redirect all unknown routes to home */}
         <Route path="*" element={<Navigate to="/" />} />

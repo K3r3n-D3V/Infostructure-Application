@@ -3,19 +3,19 @@
   color: #fff
 } */
 
- .login-container {
+.login-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../../../public/Screens/login.jpg'); 
+  background-image: url('../../../public/Screens/login.jpg');
   background-size: cover;
   background-position: center;
 }
 
 
 .login-box {
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,8 @@
   backdrop-filter: blur(2px);
 }
 
-.login-box h2,p{
+.login-box h2,
+p {
   text-align: center;
   color: #fff;
 }
@@ -41,13 +42,13 @@
   color: #fff;
 }
 
-.login-box input:hover{
+.login-box input:hover {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: filter(6px);
   cursor: pointer;
 }
 
-.login-box input::placeholder{
+.login-box input::placeholder {
   color: #fff;
   outline: none;
 }
@@ -63,12 +64,12 @@
   cursor: pointer;
 }
 
-.login-box button:hover{
+.login-box button:hover {
   background-color: #fff;
   color: #000;
 }
 
-.login-box hr{
+.login-box hr {
   border: 1px solid #fff;
-  
+
 }
