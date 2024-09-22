@@ -270,9 +270,8 @@ const Home = () => {
           <img src="../../Screens/home-delivery-ic.png" alt="" />
         </div>
         <div>
-          <Link to='./locations'>
-          <img src="../../Screens/home-track-ic.png" alt="" />
-          
+          <Link to="./locations">
+            <img src="../../Screens/home-track-ic.png" alt="" />
           </Link>
         </div>
         <div>
@@ -299,9 +298,9 @@ const Home = () => {
           type="email"
           className="email-input search-input"
           placeholder="Email Address"
-          />
-          {/* <AiOutlineArrowRight className="email-icon"/> */}
-         {/* <FaArrowRight className="email-icon"/> */}
+        />
+        {/* <AiOutlineArrowRight className="email-icon"/> */}
+        {/* <FaArrowRight className="email-icon"/> */}
       </div>
 
       <div className="contact">

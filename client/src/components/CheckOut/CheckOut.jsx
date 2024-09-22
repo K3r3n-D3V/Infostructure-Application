@@ -34,8 +34,10 @@ function CheckOut() {
   const validateFields = () => {
     let validationErrors = {};
     if (currentStep === 1) {
-      if (!formData.firstName) validationErrors.firstName = "First name is required.";
-      if (!formData.lastName) validationErrors.lastName = "Last name is required.";
+      if (!formData.firstName)
+        validationErrors.firstName = "First name is required.";
+      if (!formData.lastName)
+        validationErrors.lastName = "Last name is required.";
     } else if (currentStep === 2) {
       if (!formData.address) validationErrors.address = "Address is required.";
       if (!formData.city) validationErrors.city = "City is required.";
@@ -88,7 +90,9 @@ function CheckOut() {
 
   const preparePaymentDetails = () => {
     const PaymentDate = new Date().toLocaleDateString();
-    const TotalPrice = items.reduce((total, item) => total + parseFloat(item.Price), 0).toFixed(2);
+    const TotalPrice = items
+      .reduce((total, item) => total + parseFloat(item.Price), 0)
+      .toFixed(2);
 
     return {
       PaymentDate,
@@ -114,7 +118,7 @@ function CheckOut() {
       <form className="content" onSubmit={handleSubmit}>
         {successMessage && <p className="success">{successMessage}</p>}
         {errorMessage && <p className="error">{errorMessage}</p>}
-        
+
         {currentStep === 1 && (
           <div className="personal-info">
             <h3>1. Personal Information</h3>
@@ -136,7 +140,9 @@ function CheckOut() {
               required
             />
             {errors.lastName && <p className="error">{errors.lastName}</p>}
-            <button type="button" onClick={handleNextStep}>Next</button>
+            <button type="button" onClick={handleNextStep}>
+              Next
+            </button>
           </div>
         )}
 
@@ -179,8 +185,12 @@ function CheckOut() {
               required
             />
             {errors.zip && <p className="error">{errors.zip}</p>}
-            <button type="button" onClick={handlePreviousStep}>Previous</button>
-            <button type="button" onClick={handleNextStep}>Next</button>
+            <button type="button" onClick={handlePreviousStep}>
+              Previous
+            </button>
+            <button type="button" onClick={handleNextStep}>
+              Next
+            </button>
           </div>
         )}
 
@@ -202,29 +212,54 @@ function CheckOut() {
                 {method}
               </label>
             ))}
-            {errors.paymentMethod && <p className="error">{errors.paymentMethod}</p>}
-            <button type="button" onClick={handlePreviousStep}>Previous</button>
-            <button type="button" onClick={handleNextStep}>Next</button>
+            {errors.paymentMethod && (
+              <p className="error">{errors.paymentMethod}</p>
+            )}
+            <button type="button" onClick={handlePreviousStep}>
+              Previous
+            </button>
+            <button type="button" onClick={handleNextStep}>
+              Next
+            </button>
           </div>
         )}
 
         {currentStep === 4 && (
           <div className="personal-info">
             <h3>4. Review Order</h3>
-            <p><strong>Name:</strong> {formData.firstName} {formData.lastName}</p>
-            <p><strong>Address:</strong> {formData.address}, {formData.city}, {formData.state} {formData.zip}</p>
-            <p><strong>Payment Method:</strong> {formData.paymentMethod}</p>
+            <p>
+              <strong>Name:</strong> {formData.firstName} {formData.lastName}
+            </p>
+            <p>
+              <strong>Address:</strong> {formData.address}, {formData.city},{" "}
+              {formData.state} {formData.zip}
+            </p>
+            <p>
+              <strong>Payment Method:</strong> {formData.paymentMethod}
+            </p>
             <h4>Items in Cart:</h4>
             <ul>
               {items.map((item, index) => (
                 <li key={index}>
                   {item.ProductName} - R{item.Price}
-                  <button type="button" onClick={() => handleRemoveItem(index)}>Remove</button>
+                  <button type="button" onClick={() => handleRemoveItem(index)}>
+                    Remove
+                  </button>
                 </li>
               ))}
             </ul>
-            <h4>Total Price: R{items.reduce((total, item) => total + (parseFloat(item.Price) || 0), 0).toFixed(2)}</h4>
-            <button type="button" onClick={handlePreviousStep}>Previous</button>
+            <h4>
+              Total Price: R
+              {items
+                .reduce(
+                  (total, item) => total + (parseFloat(item.Price) || 0),
+                  0
+                )
+                .toFixed(2)}
+            </h4>
+            <button type="button" onClick={handlePreviousStep}>
+              Previous
+            </button>
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Placing Order..." : "Place Order"}
             </button>
